@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/style.css';
 import cart from '../assets/cart.png';
 import menu from '../assets/menu.png';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo-nav.png';
 
 const Navbar = () => {
   return (
