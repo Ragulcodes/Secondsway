@@ -11,11 +11,10 @@ const Offer = () => {
                         <img src={offerImg} alt="Exclusive Offer" className="offer-img" />
                     </div>
                     <div className="col-2">
-                        <p>Exclusively Available on RedStore</p>
-                        <h1>Smart Band 4</h1>
+                        <p>Exclusively Available on Secondsway</p>
+                        <h1>You can now get accessories too!!</h1>
                         <small>
-                            The Mi Smart Band 4 features a 39.9% larger (than Mi Band 3) AMOLED color full-touch display
-                            with adjustable brightness, so everything is clear as can be.<br />
+                        Explore a wide range of accessories, from stylish bags to smart watches, all at Secondsway. Find the perfect piece that fits your style and budget!<br />
                         </small>
                         <a href="products.html" className="btn">Buy Now &#8594;</a>
                     </div>
