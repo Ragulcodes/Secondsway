@@ -42,7 +42,7 @@ const AllProducts = () => {
                         <p>Category: {product.category}</p>
                         <p>Condition: {product.condition}</p>
                         <img style={{ width: '200px', height: '160px' }} src={`http://localhost:5000${product.images[0]}`}/>
-                        {product.user && <p>Seller: {product.user.name}</p>} {/* Display seller name if populated */}
+                        {product.user && <p>Seller: {product.user.name}</p>}
                     </div>
                 ))}
             </div>
