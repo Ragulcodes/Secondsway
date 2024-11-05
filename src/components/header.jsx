@@ -1,6 +1,8 @@
 import React from 'react';
 import '../styles/style.css';
-import image1 from '../assets/image1.png';
+// import image1 from '../assets/image1.png';
+// import homeimg1 from '../assets/homeimg1.png'
+import homeimg2 from '../assets/homeimg2.png'
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -13,8 +15,8 @@ const Header = () => {
             <p>At Secondsway, we make it easy for you to sell and buy quality used clothes and products. Join our community and give your items a second chance to shine!</p>
             <Link to="/products" className="btn">Explore Now &#8594;</Link>
           </div>
-          <div className="col-2">
-            <img src={image1} alt="Exchange picture" />
+          <div className="col-2 homeHeaderImg">
+            <img src={homeimg2} alt="Exchange picture" />
           </div>
         </div>
       </div>

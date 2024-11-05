@@ -4,7 +4,8 @@ import Categories from '../components/categories'
 import FeaturedProducts from '../components/featuredProducts'
 import LatestProducts from '../components/latestedProduct'
 import Offer from '../components/offer'
-import Brands from '../components/brands'
+import Testimonial from '../components/testimonial'
+// import Brands from '../components/brands'
 
 const Home = () => {
   return (
@@ -13,8 +14,9 @@ const Home = () => {
       <Categories/>
       <FeaturedProducts/>
       <LatestProducts/>
-      {/* <Offer/> */}
-      <Brands/>
+      <Offer/>
+      <Testimonial/>
+      {/* <Brands/> */}
     </>
   )
 }

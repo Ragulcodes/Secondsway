@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/style.css';
-import playStore from '../assets/play-store.png';
-import appstore from '../assets/app-store.png';
+// import playStore from '../assets/play-store.png';
+// import appstore from '../assets/app-store.png';
 import logowhite from '../assets/logo.png';
 
 const Footer = () => {
@@ -41,7 +41,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <hr />
-                <p className="copyright">Copyright 2024</p>
+                <p className="copyright">Copyright @Secondsway 2024</p>
             </div>
         </div>
     );

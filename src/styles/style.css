@@ -29,6 +29,10 @@ nav ul li{
   display: inline-block;
   margin-right: 20px;
 }
+
+
+
+
 a{
   text-decoration: none;
   color: #555;
@@ -63,7 +67,7 @@ p{
 }
 .btn{
   display: inline-block;
-  background: #ff523b;
+  background: #0199cc;
   color: white;
   padding: 8px 30px;
   margin: 30px 0;
@@ -71,10 +75,21 @@ p{
   transition: background 0.5s;
 }
 .btn:hover{
-  background: #563434;
+  background: #000000;
 }
 .header{
-  background: radial-gradient(#fff,#ffd6d6);
+  background: radial-gradient(#fff,#81e0ff);
+  padding: 0 10px;
+}
+
+/* .homeHeaderImg > img{
+  width: 70%;
+} */
+
+.imgcontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .categories{
@@ -113,7 +128,7 @@ p{
 }
 .title::after{
   content: '';
-  background: #ff523b;
+  background: #81e0ff;
   width: 80px;
   height: 5px;
   border-radius: 5px;
@@ -130,14 +145,14 @@ h4{
   font-size: 14px;
 }
 .rating .fa{
-  color: #ff523b;
+  color: #ffbb00;
 }
 .col-4:hover{
   transform: translateY(-5px);
 }
 /* Offer */
 .offer{
-  background: radial-gradient(#fff, #ffd6d6);
+  background: radial-gradient(#fff, #81e0ff);
   margin-top: 80px;
   padding: 30px 0;
 }
@@ -150,7 +165,7 @@ small{
 
 /* Testimonial */
 .testimonial{
-  margin-top: 100px;
+  margin: 90px 0;
 }
 .testimonial .col-3{
   text-align: center;
@@ -169,7 +184,7 @@ small{
 }
 .fa.fa-quote-left{
   font-size: 34px;
-  color: #ff523b;
+  color: #81e0ff;
 }
 .col-3 p{
   font-size: 12px;
@@ -219,7 +234,7 @@ small{
 }
 .footer-col-2{
   flex: 1;
-  text-align: center;
+  text-align: start;
 }
 .footer-col-2 img{
   width: 180px;
@@ -259,7 +274,7 @@ ul{
   margin: 100px auto 50px;
 }
 select{
-  border: 1px solid #ff523b;
+  border: 1px solid #81e0ff;
   padding: 5px;
 }
 select:focus{
@@ -270,7 +285,7 @@ select:focus{
 }
 .page-btn span{
   display: inline-block;
-  border: 1px solid #ff523b;
+  border: 1px solid #81e0ff;
   margin-left: 10px;
   width: 40px;
   height: 40px;
@@ -279,7 +294,7 @@ select:focus{
   cursor: pointer;
 }
 .page-btn span:hover{
-  background: #ff523b;
+  background: #81e0ff;
   color: white;
 }
 
@@ -309,14 +324,14 @@ select:focus{
   padding-left: 10px;
   font-size: 20px;
   margin-left: 10px;
-  border: 1px solid #ff523b;
+  border: 1px solid #81e0ff;
   margin-right: 10px;
 }
 input:focus{
   outline: none;
 }
 .single-product .fa{
-  color: #ff523b;
+  color: #81e0ff;
   margin-left: 10px;
 }
 .small-img-row{
@@ -344,7 +359,7 @@ th{
   text-align: left;
   padding: 5px;
   color: #fff;
-  background: #ff523b;
+  background: #81e0ff;
   font-weight: normal;
 }
 td{
@@ -356,7 +371,7 @@ td input{
   padding: 5px;
 }
 td a{
-  color: #ff523b;
+  color: #ff341e;
   font-size: 12px;
 }
 td img{
@@ -369,7 +384,7 @@ td img{
   justify-content: flex-end;
 }
 .total-price table{
-  border-top: 3px solid #ff523b;
+  border-top: 3px solid #81e0ff;
   width: 100%;
   max-width: 400px;
 }
@@ -383,7 +398,7 @@ th:last-child{
 /* Account page */
 .account-page{
   padding: 50px 0;
-  background: radial-gradient(#fff, #ffd6d6);
+  background: radial-gradient(#fff, #81e0ff);
 }
 .form-container{
   background: #fff;
@@ -442,7 +457,7 @@ form a{
 #Indicator{
   width: 100px;
   border: none;
-  background: #ff523b;
+  background: #81e0ff;
   height: 3px;
   margin-top: 8px;
   transform: translateX(100px);
@@ -498,4 +513,30 @@ form a{
   .cart-info p{
       display: none;
   }
+}
+
+
+
+.username-container {
+  position: relative; /* Required for absolute positioning of the logout button */
+}
+
+.logout-button {
+  display: inline-block; /* Ensure it's inline */
+  padding: 5px 10px; /* Add some padding */
+  background-color: #f00; /* Red background for logout */
+  color: #fff; /* White text */
+  cursor: pointer; /* Change cursor to pointer */
+  position: absolute; /* Position it absolutely */
+  top: 100%; /* Position below the username */
+  left: 0; /* Align with the username */
+  z-index: 1; /* Ensure it's above other elements */
+  border-radius: 4px; /* Rounded corners */
+  visibility: visible; /* Make sure it shows */
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.2s ease; /* Smooth transition */
+}
+
+.username-container:hover .logout-button {
+  opacity: 1; /* Show logout button on hover */
 }
