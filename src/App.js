@@ -12,6 +12,9 @@ import CartPg from './pages/cartPg';
 import ProductCreationForm from './pages/productCreationForm';
 import MyProducts from './pages/myProducts';
 import ContactUs from './pages/contactUs';
+import Biddingpd from './pages/biddingproductDs';
+import BiddingProducts from './pages/biddingProducts';
+import BiddablesPostForm from './pages/biddablesPostForm';
 
 const App = () => {
   return (
@@ -29,6 +32,9 @@ const App = () => {
             <Route path="/productsCreationForm" element={<ProductCreationForm />} />
             <Route path="/MyProducts" element={<MyProducts />} />
             <Route path="/contactUs" element={<ContactUs />} />
+            <Route path="/bidables" element={<BiddingProducts/>} />     
+            <Route path="/biddingPd" element={<Biddingpd />} /> 
+            <Route path="/biddablesPostForm" element={<BiddablesPostForm />} />            
           </Routes>
         </div>
         

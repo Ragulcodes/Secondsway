@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import axiosInstance from '../axiosInstance';  // Adjust the path to your axios instance
 import 'tailwindcss/tailwind.css';
-import ToggleButton from '@mui/material/ToggleButton';
-import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import ToggleButton from '@mui/lab/ToggleButton';
+import ToggleButtonGroup from '@mui/lab/ToggleButtonGroup';
+
 
 const ProductCreationForm = () => {
     const [productData, setProductData] = useState({

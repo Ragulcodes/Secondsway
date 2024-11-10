@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import axiosInstance from '../axiosInstance';
 import 'tailwindcss/tailwind.css';
+import SearchBar from './searchbar';
 
 const AllProducts = () => {
     const [products, setProducts] = useState([]);
@@ -33,7 +34,11 @@ const AllProducts = () => {
 
     return (
         <div className="max-w-7xl mx-auto p-6 bg-gray-100 rounded-lg shadow-md !important">
+
             <h1 className="text-3xl font-bold text-center mb-6 !important">All Products</h1>
+            <div className="mb-6">
+                <SearchBar />
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 !important">
                 {products.map((product) => (
                     <div key={product._id} className="bg-white p-4 rounded-lg shadow-lg flex flex-col !important">

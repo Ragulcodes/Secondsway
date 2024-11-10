@@ -6,6 +6,7 @@ const ProductsPg = () => {
   return (
     <>
       {/* <ProductList/> */}
+      
       <AllProducts/>
     </>
   )

@@ -36,6 +36,7 @@ const Navbar = () => {
                 <li><Link to="/products">Products</Link></li>
                 <li><Link to="/productsCreationForm">Post Form</Link></li>
                 <li><Link to="/MyProducts">My Products</Link></li>
+                <li><Link to="/bidables">Bid Products</Link></li>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/contactUs">Contact</Link></li>
                 {authState.isLoggedIn ? (
