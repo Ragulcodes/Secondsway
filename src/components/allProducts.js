@@ -3,11 +3,19 @@ import React, { useEffect, useState } from 'react';
 import axiosInstance from '../axiosInstance';
 import 'tailwindcss/tailwind.css';
 import SearchBar from './searchbar';
+import { useNavigate } from 'react-router-dom';
 
 const AllProducts = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
+    const navigate = useNavigate();
+
+    const handleViewDetails = (product) => {
+        // Navigate to the ProductDetails component with product ID
+        navigate(`/product/${product._id}`, { state: { product } });
+    };
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -39,19 +47,58 @@ const AllProducts = () => {
             <div className="mb-6">
                 <SearchBar />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 !important">
-                {products.map((product) => (
-                    <div key={product._id} className="bg-white p-4 rounded-lg shadow-lg flex flex-col !important">
-                        <img className="w-full h-48 object-contain rounded-md mb-4 !important" src={`http://localhost:5000${product.images[0]}`} alt={product.name} />
-                        <h2 className="text-xl font-bold mb-2 !important">{product.name}</h2>
-                        <p className="text-gray-700 mb-2 !important">{product.description}</p>
-                        <p className="text-gray-700 mb-2 font-bold !important">Price: ${product.price}</p>
-                        <p className="text-gray-700 mb-2 !important">Category: {product.category}</p>
-                        <p className="text-gray-700 mb-2 !important">Condition: {product.condition}</p>
-                        {product.user && <p className="text-gray-700 !important">Seller: {product.user.name}</p>}
-                        <button className="mt-auto px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 !important">View Details</button>
+            
+
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
+            {products.map((product) => (
+                <div key={product._id} className="bg-white shadow-md rounded-lg p-4 relative">
+                {/* Action Buttons */}
+                <div className="absolute left-6 top-6 flex flex-col gap-2 z-10">
+                    <button className="w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center">
+                    <span>+</span>
+                    </button>
+                    <button className="w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center">
+                    <span>🔍</span>
+                    </button>
+                </div>
+
+                {/* Product Image */}
+                <div className="mb-4">
+                    <img
+                    className="w-full h-48 object-cover rounded-lg"
+                    src={`https://secondsway-server.onrender.com${product.images[0]}`}
+                    alt={product.name}
+                    />
+                </div>
+
+                {/* Product Info */}
+                <div>
+                    <h2 className="text-gray-800 text-base font-medium mb-1">{product.name}</h2>
+                    <div className="text-gray-600 text-sm mb-3">
+                    {product.currentBid ? (
+                        <span>Current Bid: ${product.currentBid}</span>
+                    ) : (
+                        <span>${product.price}</span>
+                    )}
                     </div>
-                ))}
+
+                    {/* Action Buttons Row */}
+                    <div className="flex gap-3 mt-4">
+                    <button 
+                    onClick={() => handleViewDetails(product)}
+                    className="flex-1 bg-gray-100 text-gray-800 px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-200 transition-colors">
+                        View Details
+                    </button>
+                    <button 
+                    onClick={() => navigate('/order', { state: { product } })}
+                    className="flex-1 bg-blue-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-600 transition-colors">
+                        Buy Now
+                    </button>
+                    </div>
+                </div>
+                </div>
+            ))}
             </div>
         </div>
     );

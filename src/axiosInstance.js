@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Set the base URL for your backend
 const axiosInstance = axios.create({
-    baseURL: 'http://localhost:5000',// Your backend URL
+    baseURL: 'https://secondsway-server.onrender.com',// Your backend URL http://localhost:5000
     withCredentials: true,   
 });
 

@@ -8,16 +8,16 @@ const Contact = () => {
         <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
         <div className="space-y-4">
           <div className="flex items-center">
-            <span className="material-icons-outlined">location_on</span>
-            <p className="ml-2">211 Ullamcorper St.<br />Roseville</p>
+            <span className="material-icons-outlined">location</span>
+            <p className="ml-2 text-black">Coimbatore</p>
           </div>
           <div className="flex items-center">
             <span className="material-icons-outlined">email</span>
-            <p className="ml-2">sale@modeltheme.com</p>
+            <p className="ml-2 text-black">secondsway@gmail.com</p>
           </div>
           <div className="flex items-center">
             <span className="material-icons-outlined">phone</span>
-            <p className="ml-2">+40 712 345 678</p>
+            <p className="ml-2 text-black">+91 123-456-789</p>
           </div>
         </div>
       </div>

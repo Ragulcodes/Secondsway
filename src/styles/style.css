@@ -16,6 +16,7 @@ body{
   display: flex;
   align-items: center;
   padding: 20px;
+  position: relative;
 }
 
 nav{
@@ -30,10 +31,6 @@ nav ul li{
   display: inline-block;
   margin-right: 20px;
 }
-
-
-
-
 
 
 
@@ -479,6 +476,7 @@ form a{
       width: 100%;
       overflow: hidden;
       transition: max-height 0.5s;
+      z-index: 200;
   }
   nav ul li{
       display: block;
@@ -527,18 +525,18 @@ form a{
 
 .logout-button {
   display: inline-block; /* Ensure it's inline */
-  padding: 5px 10px; /* Add some padding */
+  padding: 4px 6px; /* Add some padding */
   background-color: #f00; /* Red background for logout */
   color: #fff; /* White text */
   cursor: pointer; /* Change cursor to pointer */
   position: absolute; /* Position it absolutely */
   top: 100%; /* Position below the username */
   left: 0; /* Align with the username */
-  z-index: 1; /* Ensure it's above other elements */
+  z-index: 2000; /* Ensure it's above other elements */
   border-radius: 4px; /* Rounded corners */
   visibility: visible; /* Make sure it shows */
   opacity: 0; /* Start hidden */
-  transition: opacity 0.2s ease; /* Smooth transition */
+  transition: opacity 0.3s ease; /* Smooth transition */
 }
 
 .username-container:hover .logout-button {

@@ -4,7 +4,6 @@ import 'tailwindcss/tailwind.css';
 import ToggleButton from '@mui/lab/ToggleButton';
 import ToggleButtonGroup from '@mui/lab/ToggleButtonGroup';
 
-
 const ProductCreationForm = () => {
     const [productData, setProductData] = useState({
         name: '',
@@ -123,7 +122,7 @@ const ProductCreationForm = () => {
                     <button type="button" onClick={handleImageUpload} className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 !important">Upload Image</button>
                     <ul className="mt-2 space-y-2 !important">
                         {productData.images.map((url, index) => (
-                            <li key={index}><img src={`http://localhost:5000${url}`} alt="Product" className="w-24 h-24 object-cover rounded-md !important" /></li>
+                            <li key={index}><img src={`https://secondsway-server.onrender.com${url}`} alt="Product" className="w-24 h-24 object-cover rounded-md !important" /></li>
                         ))}
                     </ul>
                 </div>

@@ -7,7 +7,7 @@ function BiddablesPostForm() {
     description: '',
     basePrice: '',
     currentBid: '',
-    timeLeft: { days: '', hours: '', minutes: '', seconds: '' },
+    // timeLeft: { days: '', hours: '', minutes: '', seconds: '' },
     bidStartsAt: '',
     bidDuration: { days: '', hours: '', minutes: '' },
     startBid: true,
@@ -69,12 +69,12 @@ function BiddablesPostForm() {
         image: imageUrl, // Use the uploaded image URL
         basePrice: Number(formData.basePrice),
         currentBid: Number(formData.currentBid),
-        timeLeft: {
-          days: Number(formData.timeLeft.days),
-          hours: Number(formData.timeLeft.hours),
-          minutes: Number(formData.timeLeft.minutes),
-          seconds: Number(formData.timeLeft.seconds),
-        },
+        // timeLeft: {
+        //   days: Number(formData.timeLeft.days),
+        //   hours: Number(formData.timeLeft.hours),
+        //   minutes: Number(formData.timeLeft.minutes),
+        //   seconds: Number(formData.timeLeft.seconds),
+        // },
         bidStartsAt: new Date(formData.bidStartsAt),
         bidDuration: {
           days: Number(formData.bidDuration.days),
@@ -95,7 +95,7 @@ function BiddablesPostForm() {
         description: '',
         basePrice: '',
         currentBid: '',
-        timeLeft: { days: '', hours: '', minutes: '', seconds: '' },
+        // timeLeft: { days: '', hours: '', minutes: '', seconds: '' },
         bidStartsAt: '',
         bidDuration: { days: '', hours: '', minutes: '' },
         startBid: true,
@@ -183,7 +183,7 @@ function BiddablesPostForm() {
         />
       </div>
 
-      <div className="grid grid-cols-4 gap-2">
+      {/* <div className="grid grid-cols-4 gap-2">
         <div>
           <label className="block text-gray-700">Days Left</label>
           <input 
@@ -235,7 +235,7 @@ function BiddablesPostForm() {
             max="59"
           />
         </div>
-      </div>
+      </div> */}
 
       <div>
         <label className="block text-gray-700">Bid Starts At</label>

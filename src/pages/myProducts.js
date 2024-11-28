@@ -53,19 +53,49 @@ const MyProducts = () => {
         <div className="max-w-7xl mx-auto p-6 bg-gray-100 rounded-lg shadow-md !important">
             <h2 className="text-3xl font-bold text-center mb-6 !important">My Products</h2>
             {message && <p className="text-center text-red-500 text-xl font-bold !important">{message}</p>}
-            <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 !important">
-                {products.map((product) => (
-                    <li key={product._id} className="bg-white p-4 rounded-lg shadow-lg flex flex-col !important">
-                        <div className="flex-grow">
-                            <img className="w-full h-40 object-contain rounded-md mb-2 !important" src={`http://localhost:5000${product.images[0]}`} alt={product.name} />
-                            <h3 className="text-xl font-bold mb-2 !important">{product.name}</h3>
-                            <p className="text-gray-700 mb-2 !important">{product.description}</p>
-                            <p className="text-gray-700 mb-2 font-bold !important">Rs.{product.price}</p>
-                            <p className="text-gray-700 mb-2 !important">Condition: {product.condition}</p>
-                        </div>
-                        <button onClick={() => deleteProduct(product._id)} className="mt-2 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-700 !important">Delete</button>
-                    </li>
-                ))}
+
+
+
+            <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-4">
+            {products.map((product) => (
+                <li key={product._id} className="bg-white rounded-xl shadow-md overflow-hidden relative">
+
+                {/* Product Image */}
+                <div className="relative">
+                    <img 
+                    className="w-full h-48 object-cover" 
+                    src={`https://secondsway-server.onrender.com${product.images[0]}`} 
+                    alt={product.name} 
+                    />
+                </div>
+
+                {/* Product Details */}
+                <div className="p-4">
+                    <div className="mb-4">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-1">{product.name}</h3>
+                    <p className="text-sm text-gray-600 mb-2">{product.description}</p>
+                    <p className="text-lg font-bold text-gray-900">Rs.{product.price}</p>
+                    <p className="text-sm text-gray-600">Condition: {product.condition}</p>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="flex gap-2">
+                    <button 
+                        className="flex-1 px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-lg hover:bg-blue-600 transition-colors"
+                    >
+                        {/* onClick={() => onEdit(product._id)}  */}
+                        Edit
+                    </button>
+                    <button 
+                        onClick={() => deleteProduct(product._id)} 
+                        className="flex-1 px-4 py-2 bg-red-500 text-white text-sm font-medium rounded-lg hover:bg-red-600 transition-colors"
+                    >
+                        Delete
+                    </button>
+                    </div>
+                </div>
+                </li>
+            ))}
             </ul>
         </div>
     );
