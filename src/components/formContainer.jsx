@@ -81,7 +81,7 @@ const FormContainer = () => {
         <div className="form-container">
             <div className="form-btn">
                 <span onClick={login}>Login</span>
-                <span onClick={register}>Register</span>
+                <span onClick={register}>Signup</span>
                 <hr id="Indicator" />
             </div>
 

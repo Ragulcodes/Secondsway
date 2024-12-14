@@ -2,7 +2,7 @@ import React, { useContext, useState,useEffect } from 'react';
 import { Link, useNavigate  } from 'react-router-dom';
 import { AuthContext } from '../authContext';
 import '../styles/style.css';
-import cart from '../assets/cart.png';
+import usericon from '../assets/UserProfileIcon.svg';
 import menu from '../assets/menu.png';
 import logo from '../assets/logo-nav.png';
 
@@ -62,11 +62,17 @@ const Navbar = () => {
                             )}
                         </li>
                     ) : (
-                        <li><Link to="/account">Account</Link></li>
+                        <li> 
+                          <Link to="/account">
+                            <button className="px-4 py-2 bg-blue-500 text-white font-medium rounded-lg shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 transition">
+                              Login
+                            </button>
+                          </Link>
+                        </li>
                   )}
             </ul>
         </nav>
-        <Link to="/cart"><img src={cart} width="30px" height="30px" alt="cart" /></Link>
+        <img src={usericon} width="30px" height="30px" alt="cart" />
         <img src={menu} className="menu-icon" onClick={toggleMenu} alt="menu" />
     </div>
   );
