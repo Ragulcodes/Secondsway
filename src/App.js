@@ -18,6 +18,7 @@ import BiddingProducts from './pages/biddingProducts';
 import BiddablesPostForm from './pages/biddablesPostForm';
 
 import OrderPage from './pages/order';
+import MyOrdersPage from './pages/myOrders';
 
 const App = () => {
   return (
@@ -45,6 +46,9 @@ const App = () => {
             <Route path="/biddablesPostForm" element={<BiddablesPostForm />} />       
 
             <Route path="/order" element={<OrderPage />} />  
+            <Route path="/MyOrders" element={<MyOrdersPage />} />  
+            {/* <Route path="/order/:orderId" element={<OrderDetailPage />} /> */}
+
           </Routes>
         </div>
         

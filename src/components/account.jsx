@@ -46,13 +46,15 @@ const Account = () => {
             });
             
 
+            console.log(response.data);
             // Assuming response contains username and token
             const { token, user } = response.data;
 
-            login(token, user.name);  // Call login from context
+            login(token, user.name, user.email);  // Call login from context
             
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('username', user.name); // Store username
+            localStorage.setItem('email', user.email); // Store email
             alert('Login successful!');
             navigate('/');
             window.location.reload();
