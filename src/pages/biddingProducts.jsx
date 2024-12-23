@@ -3,6 +3,7 @@ import { Clock, Heart, TrendingUp   } from 'lucide-react';
 import axiosInstance from '../axiosInstance';
 import { Link } from 'react-router-dom';
 import Timer from '../components/timer';
+import Chatbot from '../components/chatBot';
 
 
 const BiddingProducts = () => {
@@ -36,7 +37,6 @@ const BiddingProducts = () => {
 
     fetchListings();
   }, []);
-
 
   const categories = [
     "Accessories", "Bags & Wallets", "Clothing", "Dresses", "Footwear", 
@@ -168,6 +168,7 @@ const BiddingProducts = () => {
         ))}
       </div>
       </div>
+      <Chatbot/>
     </div>
   );
 };

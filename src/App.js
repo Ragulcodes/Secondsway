@@ -20,6 +20,8 @@ import BiddablesPostForm from './pages/biddablesPostForm';
 import OrderPage from './pages/order';
 import MyOrdersPage from './pages/myOrders';
 
+import Chatbot from './components/chatBot';
+
 const App = () => {
   return (
     <AuthProvider>
@@ -48,6 +50,10 @@ const App = () => {
             <Route path="/order" element={<OrderPage />} />  
             <Route path="/MyOrders" element={<MyOrdersPage />} />  
             {/* <Route path="/order/:orderId" element={<OrderDetailPage />} /> */}
+
+            <Route path="/ChatBot" element={<Chatbot />} />  
+
+
 
           </Routes>
         </div>

@@ -4,11 +4,13 @@ import axiosInstance from '../axiosInstance';
 import 'tailwindcss/tailwind.css';
 import SearchBar from './searchbar';
 import { useNavigate } from 'react-router-dom';
+import Chatbot from './chatBot';
 
 const AllProducts = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
 
     const navigate = useNavigate();
 
@@ -17,6 +19,7 @@ const AllProducts = () => {
         navigate(`/product/${product._id}`, { state: { product } });
     };
 
+    
     useEffect(() => {
         const fetchProducts = async () => {
             try {
@@ -97,9 +100,12 @@ const AllProducts = () => {
                     </button>
                     </div>
                 </div>
+                
+            
                 </div>
             ))}
             </div>
+            <Chatbot/>
         </div>
     );
 };
